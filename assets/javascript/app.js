@@ -45,12 +45,17 @@ $(document).ready(function () {
 
     //buttons
 
-    var sumbitButton = $(".btn");
+    var submitButton = $("button");
 
     //functions
 
     function addToTable() { //add form data to table
-
+        database.ref().once('value', function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+                var childData = childSnapshot.val();
+                console.log(childData)
+            });
+        });
     };
 
 
