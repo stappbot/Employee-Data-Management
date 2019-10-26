@@ -1,152 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Timesheet</title>
-    <style>
-        .container {
-            margin: 20px;
-        }
-        .card-header {
-            margin: 10px;
-        }
-        .form-group {
-            margin: 10px;
-        }
-        .btn {
-            margin: 20px;
-        }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script src="class.js"></script>
-  </head>
-  <body>
-    <div class="jumbotron alert alert-success">
-      <h1 class="display-4 text-center">Employee Data Management</h1>
-      <p class="lead text-center">
-        A Comprehensive Directory of Employee Billable Hours
-      </p>
-      <hr class="my-4" />
-    </div>
-    
-    <div class="container">
-      <div class="row">
-        <div class="card col-12">
-          <div class="card-header">
-            Current Employees
-          </div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col" class="name">Employee Name</th>
-                <th scope="col" class="role">Role</th>
-                <th scope="col" class="start-date">Start Date</th>
-                <th scope="col" class="months-worked">Months Worked</th>
-                <th scope="col" class="rate">Monthly Rate ($)</th>
-                <th scope="col" class="total-billed">Total Billed ($)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                
-                <td>Edward Scissorhands</td>
-                <td>Hair Stylist</td>
-                <td>December 1990</td>
-                <td>a lot</td>
-                <td>pies and baked goods</td>
-                <td>lots of food</td>
-              </tr>
-              <tr>
-                
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-              </tr>
-              <tr>
-                
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-              </tr>
-            </tbody>
-          </table>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Timesheet</title>
+  <style>
+    .container {
+      margin: 20px;
+    }
+
+    .card-header {
+      margin: 10px;
+    }
+
+    .form-group {
+      margin: 10px;
+    }
+
+    .btn {
+      margin: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="jumbotron alert alert-success">
+    <h1 class="display-4 text-center">Employee Data Management</h1>
+    <p class="lead text-center">
+      A Comprehensive Directory of Employee Billable Hours
+    </p>
+    <hr class="my-4" />
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="card col-12">
+        <div class="card-header">
+          Current Employees
         </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="name">Employee Name</th>
+              <th scope="col" class="role">Role</th>
+              <th scope="col" class="start-date">Start Date</th>
+              <th scope="col" class="months-worked">Months Worked</th>
+              <th scope="col" class="rate">Monthly Rate ($)</th>
+              <th scope="col" class="total-billed">Total Billed ($)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+
+              <td>Edward Scissorhands</td>
+              <td>Hair Stylist</td>
+              <td>December 1990</td>
+              <td>a lot</td>
+              <td>pies and baked goods</td>
+              <td>lots of food</td>
+            </tr>
+            <tr>
+
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+            </tr>
+            <tr>
+
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    
-    <div class="container">
-      <div class="row">
-        <div class="card col-12">
-          <div class="card-header">
-            Add Employee
-          </div>
-          <form>
-            <div class="form-group">
-              <label for="exampleInputName" class="name-input"
-                >Employee Name</label
-              >
-              <input
-                type="name"
-                class="form-control name-input"
-                id="exampleInputName"
-                placeholder="Enter Name"
-              />
-            </div>
-            
-            <div class="form-group">
-              <label for="exampleInputRole" class="role-input"
-                >Role</label
-              >
-              <input
-                type="role"
-                class="form-control role-input"
-                id="exampleInputRole"
-                placeholder="Enter Role"
-              />
-            </div>
+  </div>
 
-            <div class="form-group">
-              <label for="exampleInputMonthlyRate" class="rate-input"
-                >Role</label
-              >
-              <input
-                type="rate"
-                class="form-control rate-input"
-                id="exampleInputMonthlyRate"
-                placeholder="Enter Monthly Rate"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputStartDate" class="start-date-input"
-                >Start Date</label
-              >
-              <input
-                type="start-date"
-                class="form-control start-date-input"
-                id="exampleInputStartDate"
-                placeholder="Enter Start Date"
-              />
-            </div>
-
-            </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-          </form>
+  <div class="container">
+    <div class="row">
+      <div class="card col-12">
+        <div class="card-header">
+          Add Employee
         </div>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputName" class="name-input">Employee Name</label>
+            <input type="name" class="form-control name-input" id="exampleInputName" placeholder="Enter Name" />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputRole" class="role-input">Role</label>
+            <input type="role" class="form-control role-input" id="exampleInputRole" placeholder="Enter Role" />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputMonthlyRate" class="rate-input">Role</label>
+            <input type="rate" class="form-control rate-input" id="exampleInputMonthlyRate"
+              placeholder="Enter Monthly Rate" />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputStartDate" class="start-date-input">Start Date</label>
+            <input type="start-date" class="form-control start-date-input" id="exampleInputStartDate"
+              placeholder="Enter Start Date" />
+          </div>
+
       </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+      </form>
     </div>
-  </body>
+  </div>
+  </div>
+  <script src="assets/javascript/app.js"></script>
+</body>
+
 </html>

@@ -6,7 +6,7 @@ $(document).ready(function () {
     var dateInput = $(".start-date-input").val().trim();
     var rateInput = $(".rate-input").val().trim();
 
-    //table variables
+    //table header variables
 
     var nameDisplay = $(".name")
     var roleDisplay = $(".role")
@@ -22,7 +22,7 @@ $(document).ready(function () {
     //functions
 
     function addToTable() { //add form data to table
-        nameDisplay.val(nameInput);
+        nameDisplay.append($("<td>").val(nameInput));
         roleDisplay.val(roleInput);
         dateDisplay.val(dateInput);
         monthsDisplay.val(12);
