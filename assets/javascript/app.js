@@ -42,6 +42,7 @@ $(document).ready(function () {
     var monthsDisplay = $(".months-worked")
     var rateDispay = $(".rate")
     var billedDisplay = $(".total-billed")
+    var tableBody = $("tbody")
 
     //buttons
 
@@ -54,6 +55,16 @@ $(document).ready(function () {
             snapshot.forEach(function (childSnapshot) {
                 var childData = childSnapshot.val();
                 console.log(childData)
+                tableBody.append(
+                    "<tr>" +
+                    "<td>" + childData.name + "</td>" +
+                    "<td>" + childData.role + "</td>" +
+                    "<td>" + childData.startDate + "</td>" +
+                    "<td>" + "months worked" + "</td>" +
+                    "<td>" + childData.rate + "</td>" +
+                    "<td>" + "Total billed" + "</td>" +
+                    "</tr>"
+                )
             });
         });
     };
@@ -63,7 +74,7 @@ $(document).ready(function () {
     submitButton.on("click", function () {
         event.preventDefault();
         addToTable();
-
+        nameDisplay.text("");
     });
 
 
