@@ -22,28 +22,15 @@ $(document).ready(function () {
     //functions
 
     function addToTable() { //add form data to table
-        nameDisplay.append($("<td>").val(nameInput));
-        roleDisplay.val(roleInput);
-        dateDisplay.val(dateInput);
-        monthsDisplay.val(12);
-        rateDisplay.val(rateInput);
-        billedDisplay.val(rateInput * monthsDisplay);
+
     };
 
-    function emptyDisplay() { //empty form
-        nameDisplay.empty();
-        roleDisplay.empty();
-        dateDisplay.empty();
-        monthsDisplay.empty();
-        rateDisplay.empty();
-        billedDisplay.empty();
-    }
 
     //when submit button is clcked, populate table (needs firebase stuff) and empty form
     submitButton.on("click", function () {
         event.preventDefault();
         addToTable();
-        emptyDisplay();
+
     });
 
 
